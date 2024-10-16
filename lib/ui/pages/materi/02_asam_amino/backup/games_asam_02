@@ -1,0 +1,435 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bio_mol/cubit/pilihan_jawaban_cubit.dart';
+import 'package:bio_mol/cubit/score_cubit.dart';
+import 'package:bio_mol/models/item_model.dart';
+import 'package:bio_mol/shared/theme.dart';
+import 'package:bio_mol/ui/pages/materi/02_asam_amino/result_page_asam_amino.dart';
+import 'package:bio_mol/ui/widgets/widget_drag_asam_amino2.dart';
+// import 'package:bio_mol/ui/widgets/widget_kunci_jawaban_drag.dart';
+import 'package:bio_mol/ui/widgets/widget_nomor_halaman.dart';
+import 'package:bio_mol/ui/widgets/widget_title_subtitle.dart';
+
+class GamesAsamAmino2 extends StatefulWidget {
+  const GamesAsamAmino2({super.key});
+
+  @override
+  State<GamesAsamAmino2> createState() => _GamesAsamAmino2State();
+}
+
+class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
+  List<ItemModel> itemsJawaban = [
+    ItemModel(name: 'Protein Primer', value: 'Protein Primer'),
+    ItemModel(name: 'Protein Primer', value: 'Protein Primer'),
+    ItemModel(name: 'Protein Sekunder', value: 'Protein Sekunder'),
+    ItemModel(name: 'Protein Kuartener', value: 'Protein Kuartener'),
+    ItemModel(name: 'Protein Kuartener', value: 'Protein Kuartener'),
+  ];
+
+  String jawabanNo1 = '';
+  String jawabanNo2 = '';
+  String jawabanNo3 = '';
+  String jawabanNo4 = '';
+  String jawabanNo5 = '';
+
+  int score = 0;
+
+  initGame() {
+    context.read<PilihanJawabanCubit>().itemsKunciJawaban();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    // initGame();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    Widget kunciJawaban(List<ItemModel> items) {
+      return Wrap(
+        spacing: 6,
+        runSpacing: 10,
+        runAlignment: WrapAlignment.center,
+        children: items.map((e) {
+          return WidgetDragAsamAmino2(e);
+        }).toList(),
+      );
+    }
+
+    return BlocBuilder<PilihanJawabanCubit, PilihanJawabanState>(
+      builder: (context, state) {
+        if (state is PilihanJawabanSuccess) {
+          return Scaffold(
+            backgroundColor: kBgPrimaryColor,
+            appBar: PreferredSize(
+              preferredSize: Size.fromHeight(44),
+              child: AppBar(
+                title: Text(
+                  'Games',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 28,
+                    letterSpacing: 1.2,
+                    fontFamily: caveatBrush,
+                  ),
+                ),
+                centerTitle: true,
+                automaticallyImplyLeading: false,
+              ),
+            ),
+            body: Container(
+              height: MediaQuery.of(context).size.height,
+              child: Stack(
+                children: [
+                  SingleChildScrollView(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: defaultPadding,
+                        vertical: 16,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          WTitleSubtitle(
+                            title: '2. Identifikasi Struktur di bawah ini ',
+                            margin: const EdgeInsets.only(bottom: 12),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 16),
+                            alignment: Alignment.center,
+                            child: kunciJawaban(state.items),
+                          ),
+                          Container(
+                            height: 344,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              // color: kRedColor1,
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  'assets/games_images/gambar_asam_amino_1.png',
+                                ),
+                              ),
+                            ),
+                            child: BlocBuilder<ScoreCubit, int>(
+                              builder: (context, state) {
+                                return Stack(
+                                  children: [
+                                    Positioned(
+                                      left: 150,
+                                      top: 5,
+                                      child: DragTarget<ItemModel>(
+                                        builder: (context, acceptedItem,
+                                            rejectedItem) {
+                                          return Container(
+                                            height: 28,
+                                            width: 110,
+                                            alignment: Alignment.center,
+                                            decoration: BoxDecoration(
+                                              // color: kWhiteColor,
+                                              border: Border.all(
+                                                color: kBlackColor2,
+                                                width: 1.5,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            child: Text(
+                                              '${jawabanNo1}',
+                                              style: blackTextStyle.copyWith(
+                                                fontFamily: caveatBrush,
+                                                fontSize: 16,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          );
+                                        },
+                                        onAcceptWithDetails: (received) {
+                                          if (received.data.name ==
+                                              itemsJawaban[0].name) {
+                                            context
+                                                .read<ScoreCubit>()
+                                                .incrementeScore();
+                                            print('Yaaa Sama');
+                                          } else {
+                                            context
+                                                .read<ScoreCubit>()
+                                                .decrementScore();
+                                            print('Yaaa tidak Sama');
+                                          }
+                                          setState(() {
+                                            jawabanNo1 = received.data.name;
+                                            context
+                                                .read<PilihanJawabanCubit>()
+                                                .removeItem(
+                                                    received.data.value);
+                                          });
+                                        },
+                                        onWillAcceptWithDetails: (received) {
+                                          setState(() {
+                                            received.data.isAccepted = true;
+                                          });
+                                          return true;
+                                        },
+                                        onLeave: (received) {
+                                          setState(() {
+                                            received?.isAccepted = false;
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                    Positioned(
+                                      // left: 150,
+                                      right: 28,
+                                      top: 78,
+                                      child: DragTarget<ItemModel>(
+                                        builder: (context, acceptedItem,
+                                            rejectedItem) {
+                                          return Container(
+                                            height: 28,
+                                            width: 110,
+                                            alignment: Alignment.center,
+                                            decoration: BoxDecoration(
+                                              // color: kWhiteColor,
+                                              border: Border.all(
+                                                color: kBlackColor2,
+                                                width: 1.5,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            child: Text(
+                                              '',
+                                              style: blackTextStyle.copyWith(
+                                                fontFamily: caveatBrush,
+                                                fontSize: 16,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          );
+                                        },
+                                        onAcceptWithDetails: (received) {
+                                          setState(() {});
+                                        },
+                                      ),
+                                    ),
+                                    Positioned(
+                                      left: 20,
+                                      // right: 28,
+                                      top: 150,
+                                      child: DragTarget<ItemModel>(
+                                        builder: (context, acceptedItem,
+                                            rejectedItem) {
+                                          return Container(
+                                            height: 28,
+                                            width: 110,
+                                            alignment: Alignment.center,
+                                            decoration: BoxDecoration(
+                                              // color: kWhiteColor,
+                                              border: Border.all(
+                                                color: kBlackColor2,
+                                                width: 1.5,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            child: Text(
+                                              '',
+                                              style: blackTextStyle.copyWith(
+                                                fontFamily: caveatBrush,
+                                                fontSize: 16,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          );
+                                        },
+                                        onAcceptWithDetails: (received) {
+                                          setState(() {});
+                                        },
+                                      ),
+                                    ),
+                                    Positioned(
+                                      left: 4,
+                                      // right: 28,
+                                      top: 230,
+                                      child: DragTarget<ItemModel>(
+                                        builder: (context, acceptedItem,
+                                            rejectedItem) {
+                                          return Container(
+                                            height: 28,
+                                            width: 110,
+                                            alignment: Alignment.center,
+                                            decoration: BoxDecoration(
+                                              // color: kWhiteColor,
+                                              border: Border.all(
+                                                color: kBlackColor2,
+                                                width: 1.5,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            child: Text(
+                                              '',
+                                              style: blackTextStyle.copyWith(
+                                                fontFamily: caveatBrush,
+                                                fontSize: 16,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          );
+                                        },
+                                        onAcceptWithDetails: (received) {
+                                          setState(() {});
+                                        },
+                                      ),
+                                    ),
+                                    Positioned(
+                                      right: 100,
+                                      bottom: 18,
+                                      child: DragTarget<ItemModel>(
+                                        builder: (context, acceptedItem,
+                                            rejectedItem) {
+                                          return Container(
+                                            height: 28,
+                                            width: 110,
+                                            alignment: Alignment.center,
+                                            decoration: BoxDecoration(
+                                              // color: kWhiteColor,
+                                              border: Border.all(
+                                                color: kBlackColor2,
+                                                width: 1.5,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            child: Text(
+                                              '',
+                                              style: blackTextStyle.copyWith(
+                                                fontFamily: caveatBrush,
+                                                fontSize: 16,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          );
+                                        },
+                                        onAcceptWithDetails: (received) {
+                                          setState(() {});
+                                        },
+                                      ),
+                                    ),
+                                  ],
+                                );
+                              },
+                            ),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(top: 32),
+                            alignment: Alignment.center,
+                            child: TextButton(
+                              onPressed: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        title: Text(
+                                          'Nama Anda!',
+                                          style: blackTextStyle.copyWith(
+                                              // fontFamily: caveatBrush,
+                                              ),
+                                        ),
+                                        content: TextField(
+                                          decoration: InputDecoration(
+                                            hintText: 'Input nama anda!',
+                                            hintStyle: TextStyle(
+                                              fontFamily: 'Roboto',
+                                            ),
+                                          ),
+                                        ),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return ResultGameAsamAminoPage();
+                                              }));
+                                            },
+                                            style: TextButton.styleFrom(
+                                              backgroundColor: kBlueColor1,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(12),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              'SUBMIT',
+                                              style: blackTextStyle.copyWith(
+                                                fontWeight: medium,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      );
+                                    });
+                              },
+                              style: TextButton.styleFrom(
+                                elevation: 6,
+                                backgroundColor: kBlueColor1,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                              child: Container(
+                                width: 80,
+                                child: Text(
+                                  'Selesai',
+                                  style: blackTextStyle.copyWith(
+                                    fontSize: 20,
+                                    letterSpacing: 1,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Center(
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.pink),
+                              child: Text('New Game'),
+                              onPressed: () {
+                                initGame();
+                                setState(() {
+                                  print('Yaaa');
+                                  context
+                                      .read<PilihanJawabanCubit>()
+                                      .recallData();
+                                });
+                              },
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  WNomorHalaman(nomorHalaman: '24'),
+                ],
+              ),
+            ),
+          );
+        }
+
+        return Container(
+          height: MediaQuery.of(context).size.height,
+          child: Stack(
+            children: [
+              Center(
+                child: CircularProgressIndicator(),
+              ),
+              WNomorHalaman(nomorHalaman: '24'),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
