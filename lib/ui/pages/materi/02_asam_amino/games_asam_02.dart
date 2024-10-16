@@ -17,14 +17,6 @@ class GamesAsamAmino2 extends StatefulWidget {
 }
 
 class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
-  // List<ItemModel> itemsJawaban = [
-  //   ItemModel(id: 1, name: 'Protein Primer', value: 'proteinPrimer1'),
-  //   ItemModel(id: 3, name: 'Protein Sekunder', value: 'proteinSekunde1'),
-  //   ItemModel(id: 4, name: 'Protein Sekunder', value: 'proteinSekunder2'),
-  //   ItemModel(id: 6, name: 'Protein Tersier', value: 'proteinTersier2'),
-  //   ItemModel(id: 8, name: 'Protein Kuartener', value: 'proteinKuartener2'),
-  // ];
-
   TextEditingController playerNameController = TextEditingController();
 
   String jawabanNo1 = 'Protein Primer';
@@ -450,7 +442,6 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                         alignment: Alignment.center,
                         child: TextButton(
                           onPressed: () {
-                            print('Drag Satu ==> ${dragTarget1.isEmpty}');
                             if (dragTarget1.isEmpty ||
                                 dragTarget2.isEmpty ||
                                 dragTarget3.isEmpty ||

@@ -5,7 +5,7 @@ class ScoreCubit extends Cubit<int> {
 
   int incrementeScore() {
     emit(state + 10);
-    // print('State ==> ${state}');
+    print('State ==> ${state}');
     return state;
   }
 

@@ -18,3 +18,11 @@ List<ItemModel> jawabanIdentifikasi = [
   ItemModel(id: 6, name: 'Protein Tersier', value: 'proteinTersier2'),
   ItemModel(id: 8, name: 'Protein Kuartener', value: 'proteinKuartener2'),
 ];
+
+List<ItemModel> itemsAsamNukleat = [
+  ItemModel(id: 1, name: 'Urasil', value: 'Urasil'),
+  ItemModel(id: 2, name: 'Timin', value: 'Timin'),
+  ItemModel(id: 3, name: 'Guanin', value: 'Guanin'),
+  ItemModel(id: 4, name: 'Adenin', value: 'Adenin'),
+  ItemModel(id: 5, name: 'Sitosin', value: 'Sitosin'),
+];

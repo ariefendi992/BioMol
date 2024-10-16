@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/games_asam_nukleat2.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_input_jawaban.dart';
@@ -32,16 +33,55 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
   String nomor8 = '_____';
   String nomor9 = '_____';
   String nomor10 = '_____';
-  // String sentence = 'Monomer asam nukleat adalah (1) _____'
-  //     ' yang terdiri dari 3 komponen yaitu (2) _____ '
-  //     '(3) _____ dan '
-  //     '(4) _____. Antara monomer-monomer tersebut dihubungkan dengan ikatan '
-  //     '(5) _____. Basa yang dimiliki oleh RNA adalah '
-  //     '(6) _____ '
-  //     '(7) _____ '
-  //     '(8) _____ dan'
-  //     '(9) _____ Sekuen yang terdapat pada 2 untai ganda DNA bersifat '
-  //     '(10) _____ Anti paralel.';
+
+  String jawabanNo1 = 'Nukleotida';
+  String jawabanNo2 = 'Basa Nitrogen';
+  String jawabanNo3 = 'Gula Pentosa';
+  String jawabanNo4 = 'Gugus Fosforik';
+  String jawabanNo5 = 'Fosfodiester';
+  String jawabanNo6 = 'Urasil';
+  String jawabanNo7 = 'Sitosin';
+  String jawabanNo8 = 'Adenin';
+  String jawabanNo9 = 'Guanin';
+  String jawabanNo10 = 'Anti paralel';
+
+  int scoreNomor1 = 0;
+  int scoreNomor2 = 0;
+  int scoreNomor3 = 0;
+  int scoreNomor4 = 0;
+  int scoreNomor5 = 0;
+  int scoreNomor6 = 0;
+  int scoreNomor7 = 0;
+  int scoreNomor8 = 0;
+  int scoreNomor9 = 0;
+  int scoreNomor10 = 0;
+
+  int totalScore = 0;
+
+  void resetString() {
+    controllerNomor1.clear();
+    controllerNomor2.clear();
+    controllerNomor3.clear();
+    controllerNomor4.clear();
+    controllerNomor5.clear();
+    controllerNomor6.clear();
+    controllerNomor7.clear();
+    controllerNomor8.clear();
+    controllerNomor9.clear();
+    controllerNomor10.clear();
+
+    nomor1 = '_____';
+    nomor2 = '_____';
+    nomor3 = '_____';
+    nomor4 = '_____';
+    nomor5 = '_____';
+    nomor6 = '_____';
+    nomor7 = '_____';
+    nomor8 = '_____';
+    nomor9 = '_____';
+    nomor10 = '_____';
+    totalScore = 0;
+  }
 
   @override
   void initState() {
@@ -66,7 +106,11 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
           automaticallyImplyLeading: false,
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  resetString();
+                });
+              },
               icon: Icon(Icons.refresh),
             ),
           ],
@@ -87,23 +131,6 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                   title: '1. Lengkapi jawaban dibawah ini ',
                   margin: const EdgeInsets.only(top: 12, bottom: 6),
                 ),
-                // Text(
-                //   'Monomer asam nukleat adalah (1) $nomor1'
-                //   ' yang terdiri dari 3 komponen yaitu (2) $nomor2 '
-                //   '(3) _____ dan '
-                //   '(4) _____. Antara monomer-monomer tersebut dihubungkan dengan ikatan '
-                //   '(5) _____. Basa yang dimiliki oleh RNA adalah '
-                //   '(6) _____ '
-                //   '(7) _____ '
-                //   '(8) _____ dan'
-                //   '(9) _____ Sekuen yang terdapat pada 2 untai ganda DNA bersifat '
-                //   '(10) _____ Anti paralel.',
-                //   style: blackTextStyle.copyWith(
-                //     fontFamily: caveatBrush,
-                //     fontSize: 18,
-                //   ),
-                //   textAlign: TextAlign.justify,
-                // ),
                 RichText(
                   textAlign: TextAlign.justify,
                   text: TextSpan(
@@ -256,14 +283,6 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                           color: kOrangeColor1,
                         ),
                       ),
-                      TextSpan(
-                        text: ' Anti paralel ',
-                        style: blackTextStyle.copyWith(
-                          fontFamily: caveatBrush,
-                          fontSize: 16,
-                          fontWeight: regular,
-                        ),
-                      ),
                     ],
                   ),
                 ),
@@ -278,6 +297,20 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                       WInputJawaban(
                         controller: controllerNomor1,
                         onChange: (text) {
+                          if (jawabanNo1.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor1 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor1 = 0;
+                            });
+                          }
+
+                          // totalScore = scoreNomor1 + scoreNomor2 + scoreNomor3;
+
+                          // print('Total Score ==> $totalScore');
+
                           setState(() {
                             nomor1 = text.isEmpty ? '_____' : text;
                           });
@@ -287,6 +320,19 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor2,
                         labelText: 'Jawaban No.2',
                         onChange: (text) {
+                          if (jawabanNo2.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor2 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor2 = 0;
+                            });
+                          }
+
+                          // totalScore = scoreNomor1 + scoreNomor2 + scoreNomor3;
+
+                          // print('Total Score ==> $totalScore');
                           setState(() {
                             nomor2 = text.isEmpty ? '_____' : text;
                           });
@@ -296,6 +342,16 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor3,
                         labelText: 'Jawaban No.3',
                         onChange: (text) {
+                          if (jawabanNo3.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor3 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor3 = 0;
+                            });
+                          }
+
                           setState(() {
                             nomor3 = text.isEmpty ? '_____' : text;
                           });
@@ -305,6 +361,16 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor4,
                         labelText: 'Jawaban No.4',
                         onChange: (text) {
+                          if (jawabanNo4.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor4 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor4 = 0;
+                            });
+                          }
+
                           setState(() {
                             nomor4 = text.isEmpty ? '_____' : text;
                           });
@@ -314,6 +380,16 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor5,
                         labelText: 'Jawaban No.5',
                         onChange: (text) {
+                          if (jawabanNo5.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor5 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor5 = 0;
+                            });
+                          }
+
                           setState(() {
                             nomor5 = text.isEmpty ? '_____' : text;
                           });
@@ -323,6 +399,16 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor6,
                         labelText: 'Jawaban No.6',
                         onChange: (text) {
+                          if (jawabanNo6.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor6 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor6 = 0;
+                            });
+                          }
+
                           setState(() {
                             nomor6 = text.isEmpty ? '_____' : text;
                           });
@@ -332,6 +418,16 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor7,
                         labelText: 'Jawaban No.7',
                         onChange: (text) {
+                          if (jawabanNo7.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor7 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor7 = 0;
+                            });
+                          }
+
                           setState(() {
                             nomor7 = text.isEmpty ? '_____' : text;
                           });
@@ -341,6 +437,16 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor8,
                         labelText: 'Jawaban No.8',
                         onChange: (text) {
+                          if (jawabanNo8.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor8 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor8 = 0;
+                            });
+                          }
+
                           setState(() {
                             nomor8 = text.isEmpty ? '_____' : text;
                           });
@@ -350,6 +456,16 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor9,
                         labelText: 'Jawaban No.9',
                         onChange: (text) {
+                          if (jawabanNo9.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor9 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor9 = 0;
+                            });
+                          }
+
                           setState(() {
                             nomor9 = text.isEmpty ? '_____' : text;
                           });
@@ -359,6 +475,16 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                         controller: controllerNomor10,
                         labelText: 'Jawaban No.10',
                         onChange: (text) {
+                          if (jawabanNo10.toLowerCase() == text.toLowerCase()) {
+                            setState(() {
+                              scoreNomor10 = 10;
+                            });
+                          } else {
+                            setState(() {
+                              scoreNomor10 = 0;
+                            });
+                          }
+
                           setState(() {
                             nomor10 = text.isEmpty ? '_____' : text;
                           });
@@ -372,10 +498,46 @@ class _GamesAsamNukleat1PageState extends State<GamesAsamNukleat1Page> {
                   margin: const EdgeInsets.only(top: 44, bottom: 32),
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return GamesAsamNukleat1Page();
-                      }));
+                      if (controllerNomor1.text.isEmpty ||
+                          controllerNomor2.text.isEmpty ||
+                          controllerNomor3.text.isEmpty ||
+                          controllerNomor4.text.isEmpty ||
+                          controllerNomor5.text.isEmpty ||
+                          controllerNomor6.text.isEmpty ||
+                          controllerNomor7.text.isEmpty ||
+                          controllerNomor8.text.isEmpty ||
+                          controllerNomor9.text.isEmpty ||
+                          controllerNomor10.text.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              'Harap lengkapi jawaban Anda dahulu!',
+                              style: blackTextStyle.copyWith(
+                                color: kWhiteColor,
+                                fontWeight: medium,
+                              ),
+                            ),
+                            backgroundColor: kRedColor1,
+                            duration: Duration(seconds: 3),
+                          ),
+                        );
+                      } else {
+                        totalScore = scoreNomor1 +
+                            scoreNomor2 +
+                            scoreNomor3 +
+                            scoreNomor4 +
+                            scoreNomor5 +
+                            scoreNomor6 +
+                            scoreNomor7 +
+                            scoreNomor8 +
+                            scoreNomor9 +
+                            scoreNomor10;
+
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return GamesAsamNukleat2Page(totalScore);
+                        }));
+                      }
                     },
                     style: TextButton.styleFrom(
                       backgroundColor: kBlueColor1,

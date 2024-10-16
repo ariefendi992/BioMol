@@ -21,9 +21,9 @@ class _ResultGameAsamAminoPageState extends State<ResultGameAsamAminoPage> {
   @override
   void initState() {
     super.initState();
-    print('Player Name == ${widget.playerName}');
-    print('Skor 1 == ${widget.skor1}');
-    print('Skor 2 == ${widget.skor2}');
+    // print('Player Name == ${widget.playerName}');
+    // print('Skor 1 == ${widget.skor1}');
+    // print('Skor 2 == ${widget.skor2}');
   }
 
   @override
@@ -199,7 +199,7 @@ class _ResultGameAsamAminoPageState extends State<ResultGameAsamAminoPage> {
                             EdgeInsets.symmetric(horizontal: 6, vertical: 12),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/asamNukleat');
+                        Navigator.pushNamed(context, '/asamAmino');
                       },
                       child: Icon(
                         Icons.list,
