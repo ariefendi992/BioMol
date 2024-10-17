@@ -56,7 +56,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                                           'gugus fungsi aldehid disebut dengan ',
                                       style: blackTextStyle.copyWith(
                                         fontFamily: 'Caveat Brush',
-                                        fontSize: 12,
+                                        fontSize: 14,
                                       ),
                                     ),
                                     WidgetSpan(
@@ -70,7 +70,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                                         child: Text(
                                           'aldosa',
                                           style: blackTextStyle.copyWith(
-                                            fontSize: 12,
+                                            fontSize: 14,
                                             fontFamily: 'Caveat Brush',
                                             height: 1.2,
                                           ),
@@ -81,7 +81,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                                       text: '.',
                                       style: blackTextStyle.copyWith(
                                         fontFamily: 'Caveat Brush',
-                                        fontSize: 12,
+                                        fontSize: 14,
                                       ),
                                     ),
                                   ],
@@ -111,7 +111,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                                           'disebut dengan ',
                                       style: blackTextStyle.copyWith(
                                         fontFamily: 'Caveat Brush',
-                                        fontSize: 12,
+                                        fontSize: 14,
                                         height: 1,
                                       ),
                                     ),
@@ -126,7 +126,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                                         child: Text(
                                           'ketosa',
                                           style: blackTextStyle.copyWith(
-                                            fontSize: 12,
+                                            fontSize: 14,
                                             fontFamily: 'Caveat Brush',
                                             height: 1.2,
                                           ),
@@ -137,7 +137,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                                       text: '.',
                                       style: blackTextStyle.copyWith(
                                         fontFamily: 'Caveat Brush',
-                                        fontSize: 12,
+                                        fontSize: 14,
                                       ),
                                     ),
                                   ],
@@ -178,7 +178,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                               WParagraf(
                                 teks: '(a) Glukosa',
                                 textAlign: TextAlign.center,
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontFamily: 'Caveat Brush',
                                 textIndent: false,
                               )
@@ -197,7 +197,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                               WParagraf(
                                 teks: '(b) Fruktosa',
                                 textAlign: TextAlign.center,
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontFamily: 'Caveat Brush',
                                 textIndent: false,
                               )
@@ -217,7 +217,7 @@ class StrukturKarbohidratPage extends StatelessWidget {
                             'proyeksi Howarth (Struktur Siklik)',
                         fontFamily: 'Caveat Brush',
                         textIndent: false,
-                        fontSize: 12,
+                        fontSize: 14,
                         textAlign: TextAlign.center,
                       ),
                     )

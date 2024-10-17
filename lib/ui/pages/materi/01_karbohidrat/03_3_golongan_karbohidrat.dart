@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -32,15 +33,26 @@ class GolonganKarbohidratBagian3 extends StatelessWidget {
               Flexible(
                 child: Column(
                   children: [
-                    CImagetAsset(
-                      imageName: 'assets/images/gambar1.14.png',
-                      width: 150,
+                    GestureDetector(
+                      onDoubleTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return WDialogImage(
+                                imageUrl: 'assets/images/gambar1.14.png');
+                          },
+                        );
+                      },
+                      child: CImagetAsset(
+                        imageName: 'assets/images/gambar1.14.png',
+                        width: 150,
+                      ),
                     ),
                     const SizedBox(height: 2),
                     Text(
                       'Gambar 1.14. Struktur Sukrosa',
                       style: blackTextStyle.copyWith(
-                        fontSize: 12,
+                        fontSize: 14,
                         fontFamily: 'Caveat Brush',
                       ),
                       textAlign: TextAlign.center,
@@ -136,15 +148,26 @@ class GolonganKarbohidratBagian3 extends StatelessWidget {
               Flexible(
                 child: Column(
                   children: [
-                    CImagetAsset(
-                      imageName: 'assets/images/gambar1.15.png',
-                      width: 140,
+                    GestureDetector(
+                      onDoubleTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (_) {
+                            return WDialogImage(
+                                imageUrl: 'assets/images/gambar1.15.png');
+                          },
+                        );
+                      },
+                      child: CImagetAsset(
+                        imageName: 'assets/images/gambar1.15.png',
+                        width: 140,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       'Gambar 1.15. Struktur Maltosa',
                       style: blackTextStyle.copyWith(
-                        fontSize: 12,
+                        fontSize: 14,
                         fontFamily: 'Caveat Brush',
                         height: 1,
                       ),
@@ -163,15 +186,25 @@ class GolonganKarbohidratBagian3 extends StatelessWidget {
                 flex: 2,
                 child: Column(
                   children: [
-                    CImagetAsset(
-                      imageName: 'assets/images/gambar1.16.png',
-                      width: 130,
+                    GestureDetector(
+                      onDoubleTap: () {
+                        showDialog(
+                            context: context,
+                            builder: (_) {
+                              return WDialogImage(
+                                  imageUrl: 'assets/images/gambar1.16.png');
+                            });
+                      },
+                      child: CImagetAsset(
+                        imageName: 'assets/images/gambar1.16.png',
+                        width: 130,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       'Gambar 1.16. Struktur Rafinosa',
                       style: blackTextStyle.copyWith(
-                        fontSize: 12,
+                        fontSize: 14,
                         fontFamily: 'Caveat Brush',
                         height: 1,
                       ),
@@ -244,15 +277,25 @@ class GolonganKarbohidratBagian3 extends StatelessWidget {
                 flex: 2,
                 child: Column(
                   children: [
-                    CImagetAsset(
-                      imageName: 'assets/images/gambar1.17.png',
-                      width: 150,
+                    GestureDetector(
+                      onDoubleTap: () {
+                        showDialog(
+                            context: context,
+                            builder: (_) {
+                              return WDialogImage(
+                                  imageUrl: 'assets/images/gambar1.17.png');
+                            });
+                      },
+                      child: CImagetAsset(
+                        imageName: 'assets/images/gambar1.17.png',
+                        width: 150,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       'Gambar 1.17. Struktur Rafinosa',
                       style: blackTextStyle.copyWith(
-                        fontSize: 12,
+                        fontSize: 14,
                         fontFamily: 'Caveat Brush',
                         height: 1,
                       ),

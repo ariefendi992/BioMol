@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -39,9 +40,21 @@ class GolonganKarbohidratBagian5 extends StatelessWidget {
                   Center(
                     child: Column(
                       children: [
-                        CImagetAsset(
-                          imageName: 'assets/images/gambar1.22.png',
-                          width: MediaQuery.of(context).size.width / 1.4,
+                        GestureDetector(
+                          onDoubleTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (_) {
+                                  return WDialogImage(
+                                    imageUrl: 'assets/images/gambar1.22.png',
+                                    dialogHeight: 220,
+                                  );
+                                });
+                          },
+                          child: CImagetAsset(
+                            imageName: 'assets/images/gambar1.22.png',
+                            width: MediaQuery.of(context).size.width / 1.4,
+                          ),
                         ),
                         WGambarTitle(
                           text: 'Gambar 1.22. Struktur Glikogen',
@@ -67,9 +80,19 @@ class GolonganKarbohidratBagian5 extends StatelessWidget {
                   Center(
                     child: Column(
                       children: [
-                        CImagetAsset(
-                          imageName: 'assets/images/gambar1.23.png',
-                          width: MediaQuery.of(context).size.width / 1.4,
+                        GestureDetector(
+                          onDoubleTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (_) {
+                                  return WDialogImage(
+                                      imageUrl: 'assets/images/gambar1.23.png');
+                                });
+                          },
+                          child: CImagetAsset(
+                            imageName: 'assets/images/gambar1.23.png',
+                            width: MediaQuery.of(context).size.width / 1.4,
+                          ),
                         ),
                         WGambarTitle(
                           text:

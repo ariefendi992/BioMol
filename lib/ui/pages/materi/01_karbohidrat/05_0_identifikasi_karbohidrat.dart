@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -35,9 +36,20 @@ class IdentifikasiKarbohidratPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   Center(
-                    child: CImagetAsset(
-                      imageName: 'assets/images/gambar1.31.png',
-                      width: MediaQuery.of(context).size.width,
+                    child: GestureDetector(
+                      onDoubleTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (_) => WDialogImage(
+                            imageUrl: 'assets/images/gambar1.31.png',
+                            dialogHeight: 140,
+                          ),
+                        );
+                      },
+                      child: CImagetAsset(
+                        imageName: 'assets/images/gambar1.31.png',
+                        width: MediaQuery.of(context).size.width,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),

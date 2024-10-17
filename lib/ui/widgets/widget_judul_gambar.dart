@@ -12,7 +12,7 @@ class WGambarTitle extends StatelessWidget {
     super.key,
     required this.text,
     this.fontFamily = 'Caveat Brush',
-    this.fontSize = 13,
+    this.fontSize = 14,
     this.textAlign = TextAlign.center,
     this.margin = EdgeInsets.zero,
     this.height = 1,

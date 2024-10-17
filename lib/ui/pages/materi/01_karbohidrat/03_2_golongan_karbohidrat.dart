@@ -48,7 +48,8 @@ class GolonganKarbohidratBagian2 extends StatelessWidget {
                             'Gambar 1.12. Cincin Furanosa dan Cincin Piranosa',
                             style: blackTextStyle.copyWith(
                               fontFamily: 'Caveat Brush',
-                              fontSize: 12,
+                              fontSize: 14,
+                              height: 0.5,
                             ),
                           )
                         ],
@@ -87,7 +88,7 @@ class GolonganKarbohidratBagian2 extends StatelessWidget {
                               'menggabungkan glukosa dan fruktosa',
                               style: blackTextStyle.copyWith(
                                 fontFamily: 'Caveat Brush',
-                                fontSize: 12,
+                                fontSize: 14,
                               ),
                               textAlign: TextAlign.center,
                             ),

@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -38,15 +39,26 @@ class GolonganKarbohidratBagian4 extends StatelessWidget {
                     child: Center(
                       child: Column(
                         children: [
-                          CImagetAsset(
-                            imageName: 'assets/images/gambar1.18.png',
-                            width: 260,
+                          GestureDetector(
+                            onDoubleTap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (_) {
+                                    return WDialogImage(
+                                        imageUrl:
+                                            'assets/images/gambar1.18.png');
+                                  });
+                            },
+                            child: CImagetAsset(
+                              imageName: 'assets/images/gambar1.18.png',
+                              width: 260,
+                            ),
                           ),
                           const SizedBox(height: 4),
                           Text(
                             'Gambar 1.18. Struktur Stakiosa',
                             style: blackTextStyle.copyWith(
-                              fontSize: 12,
+                              fontSize: 14,
                               fontFamily: 'Caveat Brush',
                               height: 1,
                             ),
@@ -124,9 +136,22 @@ class GolonganKarbohidratBagian4 extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar1.19.crop.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (_) {
+                                      return WDialogImage(
+                                        imageUrl:
+                                            'assets/images/gambar1.19.crop.png',
+                                        dialogHeight: 180,
+                                      );
+                                    });
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar1.19.crop.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             Center(
                               child: WGambarTitle(
@@ -152,9 +177,20 @@ class GolonganKarbohidratBagian4 extends StatelessWidget {
                         flex: 2,
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar1.20.crop.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (_) {
+                                      return WDialogImage(
+                                          imageUrl:
+                                              'assets/images/gambar1.20.crop.png');
+                                    });
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar1.20.crop.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             WGambarTitle(
                               text: 'Gambar 1.20. Struktur Amilopektin',
@@ -169,9 +205,20 @@ class GolonganKarbohidratBagian4 extends StatelessWidget {
                   Center(
                     child: Column(
                       children: [
-                        CImagetAsset(
-                          imageName: 'assets/images/gambar1.21.crop.png',
-                          width: MediaQuery.of(context).size.width / 1.485,
+                        GestureDetector(
+                          onDoubleTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (_) {
+                                  return WDialogImage(
+                                      imageUrl:
+                                          'assets/images/gambar1.21.crop.png');
+                                });
+                          },
+                          child: CImagetAsset(
+                            imageName: 'assets/images/gambar1.21.crop.png',
+                            width: MediaQuery.of(context).size.width / 1.485,
+                          ),
                         ),
                         WGambarTitle(
                             text:

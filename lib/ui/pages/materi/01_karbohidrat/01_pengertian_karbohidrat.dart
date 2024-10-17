@@ -17,15 +17,15 @@ class PengertianKarbohidratPage extends StatelessWidget {
         builder: (context, state) {
           return Row(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment:
-                !state ? MainAxisAlignment.center : MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            // mainAxisAlignment:     !state ? MainAxisAlignment.center : MainAxisAlignment.start,
             children: [
               Flexible(
                 child: Column(
                   children: [
                     GestureDetector(
                       onTap: () {
-                        context.read<BooleanCubit>().toggle();
+                        // context.read<BooleanCubit>().toggle();
                       },
                       child: CImagetAsset(
                         imageName: 'assets/images/karbohidrat1.crop.png',
@@ -45,19 +45,17 @@ class PengertianKarbohidratPage extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 4),
-              state
-                  ? Flexible(
-                      child: WParagraf(
-                        teks: 'Karbohidrat diproduksi di alam oleh '
-                            'tumbuhan melalui bantuan cahaya matahari dan '
-                            'disimpan dalam bentuk amilum (melalui proses fotosintesis). '
-                            'Bahan yang digunakan adalah karbon dioksida dan air sehingga '
-                            'menghasilkan glukosa dan oksigen. ',
-                        fontFamily: 'Caveat Brush',
-                        textIndent: false,
-                      ),
-                    )
-                  : SizedBox(),
+              Flexible(
+                child: WParagraf(
+                  teks: 'Karbohidrat diproduksi di alam oleh '
+                      'tumbuhan melalui bantuan cahaya matahari dan '
+                      'disimpan dalam bentuk amilum (melalui proses fotosintesis). '
+                      'Bahan yang digunakan adalah karbon dioksida dan air sehingga '
+                      'menghasilkan glukosa dan oksigen. ',
+                  fontFamily: 'Caveat Brush',
+                  textIndent: false,
+                ),
+              )
             ],
           );
         },
@@ -66,7 +64,7 @@ class PengertianKarbohidratPage extends StatelessWidget {
 
     Widget gambarKiri() {
       return Positioned(
-        top: 390,
+        top: 340,
         child: Container(
           padding: EdgeInsets.only(left: defaultPadding),
           child: Column(
@@ -77,7 +75,7 @@ class PengertianKarbohidratPage extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.only(top: 6),
-                width: 140,
+                width: 160,
                 child: WParagraf(
                   teks: 'Gambar 1.3. Molekul Glukosa. tersusun dari unsur C '
                       '(karbon), H (hidrogen), dan O (oksigen) dengan '
@@ -86,7 +84,7 @@ class PengertianKarbohidratPage extends StatelessWidget {
                       'Hal ini disebabkan karena molekul karbohidrat terdiri '
                       'dari atom karbon yang dikelilingi oleh atom hidrat (air).',
                   textAlign: TextAlign.center,
-                  fontSize: 12,
+                  fontSize: 14,
                   fontFamily: 'Caveat Brush',
                   textIndent: false,
                   textHeight: 1.1,
@@ -100,16 +98,50 @@ class PengertianKarbohidratPage extends StatelessWidget {
 
     Widget gambarKanan() {
       return Positioned(
-        top: 310,
+        top: 270,
         right: 0,
         child: Container(
           padding: EdgeInsets.only(right: defaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              CImagetAsset(
-                imageName: 'assets/images/karbohidrat2.crop.png',
-                width: 200,
+              GestureDetector(
+                onDoubleTap: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return Dialog(
+                          insetPadding: EdgeInsets.symmetric(horizontal: 6),
+                          shape: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12)),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            width: double.infinity,
+                            // height: 250,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: InteractiveViewer(
+                                maxScale: 5.0,
+                                minScale: 1.0,
+                                boundaryMargin: EdgeInsets.all(double.infinity),
+                                child: Image.asset(
+                                  'assets/images/karbohidrat2.crop.png',
+                                  width: double.infinity,
+                                  // height: 500,
+                                  // height: 150,
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      });
+                },
+                child: CImagetAsset(
+                  imageName: 'assets/images/karbohidrat2.crop.png',
+                  width: 200,
+                ),
               ),
               Container(
                 margin: EdgeInsets.only(top: 6),
@@ -117,7 +149,7 @@ class PengertianKarbohidratPage extends StatelessWidget {
                 child: WParagraf(
                   teks: 'Gambar 1.2. Fotosintesis Tumbuhan Hijau',
                   textAlign: TextAlign.center,
-                  fontSize: 12,
+                  fontSize: 14,
                   fontFamily: 'Caveat Brush',
                   textIndent: false,
                   textHeight: 1.1,
@@ -131,8 +163,8 @@ class PengertianKarbohidratPage extends StatelessWidget {
 
     Widget keteragan() {
       return Positioned(
-        top: 530,
-        right: 0,
+        top: 510,
+        right: -10,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           width: MediaQuery.of(context).size.width / 1.99,
@@ -189,7 +221,7 @@ class PengertianKarbohidratPage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 6),
+                        SizedBox(height: 12),
                         WTitleSubtitle(
                           title: '1. Pengertian Karbohidrat',
                         ),

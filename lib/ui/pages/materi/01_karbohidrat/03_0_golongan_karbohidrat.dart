@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -55,16 +56,54 @@ class GolonganKarbohidratPage extends StatelessWidget {
                                 teks: 'Tabel 1.1. Klasifikasi Karbohidrat',
                                 textAlign: TextAlign.center,
                                 textIndent: false,
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontFamily: 'Caveat Brush',
                                 textHeight: 0.9,
                               ),
                             ),
                           ),
-                          CImagetAsset(
-                            imageName: 'assets/images/tabel1.1.crop.png',
-                            width: MediaQuery.of(context).size.width,
-                            margin: EdgeInsets.symmetric(horizontal: 2),
+                          GestureDetector(
+                            onDoubleTap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return Dialog(
+                                      insetPadding:
+                                          EdgeInsets.symmetric(horizontal: 6),
+                                      shape: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(12)),
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 10),
+                                        width: double.infinity,
+                                        height: 200,
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: InteractiveViewer(
+                                            maxScale: 5.0,
+                                            minScale: 1.0,
+                                            boundaryMargin:
+                                                EdgeInsets.all(double.infinity),
+                                            child: Image.asset(
+                                              'assets/images/tabel1.1.crop.png',
+                                              width: double.infinity,
+                                              // height: 500,
+                                              // height: 150,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  });
+                            },
+                            child: CImagetAsset(
+                              imageName: 'assets/images/tabel1.1.crop.png',
+                              width: MediaQuery.of(context).size.width,
+                              margin: EdgeInsets.symmetric(horizontal: 2),
+                            ),
                           ),
                           const SizedBox(height: 4),
                           Padding(
@@ -105,7 +144,7 @@ class GolonganKarbohidratPage extends StatelessWidget {
                                       teks: 'Gambar 1.7. Karbohidrat Sederhana',
                                       textAlign: TextAlign.center,
                                       textIndent: false,
-                                      fontSize: 12,
+                                      fontSize: 14,
                                       fontFamily: 'Caveat Brush',
                                       textHeight: 0.9,
                                     ),
@@ -169,10 +208,22 @@ class GolonganKarbohidratPage extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      CImagetAsset(
-                                        imageName:
-                                            'assets/images/gambar1.8.crop.png',
-                                        width: 200,
+                                      GestureDetector(
+                                        onDoubleTap: () {
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return WDialogImage(
+                                                  imageUrl:
+                                                      'assets/images/gambar1.8.crop.png',
+                                                );
+                                              });
+                                        },
+                                        child: CImagetAsset(
+                                          imageName:
+                                              'assets/images/gambar1.8.crop.png',
+                                          width: 200,
+                                        ),
                                       ),
                                       const SizedBox(height: 2),
                                       Container(
@@ -183,7 +234,7 @@ class GolonganKarbohidratPage extends StatelessWidget {
                                               'Gambar 1.8. Struktur dekstro dan levo Karbohidrat',
                                           textAlign: TextAlign.center,
                                           textIndent: false,
-                                          fontSize: 12,
+                                          fontSize: 14,
                                           fontFamily: 'Caveat Brush',
                                           textHeight: 0.9,
                                         ),

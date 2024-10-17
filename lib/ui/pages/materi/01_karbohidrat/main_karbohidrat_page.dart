@@ -83,7 +83,7 @@ class _MainKarbohidratPageState extends State<MainKarbohidratPage> {
       ),
       body: PageView(
         controller: pageController,
-        physics: const NeverScrollableScrollPhysics(),
+        // physics: const NeverScrollableScrollPhysics(),
         children: [
           // pengertianKarbohidrat(),
           // strukturKarbohidrat(),

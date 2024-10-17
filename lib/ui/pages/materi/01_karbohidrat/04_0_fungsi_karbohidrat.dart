@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -192,9 +193,18 @@ class FungsiKarbohidratPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CImagetAsset(
-                          imageName: 'assets/images/gambar1.29.png',
-                          width: 146,
+                        GestureDetector(
+                          onDoubleTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (_) => WDialogImage(
+                                  imageUrl: 'assets/images/gambar1.29.png'),
+                            );
+                          },
+                          child: CImagetAsset(
+                            imageName: 'assets/images/gambar1.29.png',
+                            width: 146,
+                          ),
                         ),
                         const SizedBox(width: 12),
                         Flexible(

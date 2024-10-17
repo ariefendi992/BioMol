@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -41,7 +42,7 @@ class GolonganKarbohidratBagian1 extends StatelessWidget {
                         Text(
                           'Gambar 1.9. Stereoisomer Glukosa',
                           style: blackTextStyle.copyWith(
-                            fontSize: 12,
+                            fontSize: 14,
                             fontFamily: 'Caveat Brush',
                           ),
                           textAlign: TextAlign.center,
@@ -96,7 +97,7 @@ class GolonganKarbohidratBagian1 extends StatelessWidget {
                             child: Text(
                               'Gambar 1.10. Contoh Epimer Monosakarida',
                               style: blackTextStyle.copyWith(
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontFamily: 'Caveat Brush',
                               ),
                               textAlign: TextAlign.center,
@@ -123,14 +124,27 @@ class GolonganKarbohidratBagian1 extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar1.11.crop.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return WDialogImage(
+                                      imageUrl:
+                                          'assets/images/gambar1.11.crop.png',
+                                    );
+                                  },
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar1.11.crop.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             Text(
                               'Gambar 1.11. Formula Proyeksi Fischer dan Haworth D-Glukosa',
                               style: blackTextStyle.copyWith(
-                                fontSize: 12,
+                                fontSize: 14,
                                 fontFamily: 'Caveat Brush',
                               ),
                               textAlign: TextAlign.center,

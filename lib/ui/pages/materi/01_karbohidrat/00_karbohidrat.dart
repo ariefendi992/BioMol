@@ -151,8 +151,7 @@ class KarbohidratPage extends StatelessWidget {
                                     'Mampu menjelaskan struktur, golongan  dan fungsi karbohidrat',
                                     textAlign: TextAlign.center,
                                     style: blackTextStyle.copyWith(
-                                      fontSize: 20,
-                                      fontWeight: medium,
+                                      fontSize: 22,
                                       fontFamily: caveatBrush,
                                     ),
                                   ),
