@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -230,9 +231,20 @@ class DenaturasiProteinPage extends StatelessWidget {
                         flex: 3,
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.24.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                    imageUrl: 'assets/images/gambar2.24.png',
+                                    dialogHeight: 200,
+                                  ),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.24.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             WGambarTitle(
                               text:
@@ -251,9 +263,20 @@ class DenaturasiProteinPage extends StatelessWidget {
                         flex: 3,
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.25.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                    imageUrl: 'assets/images/gambar2.25.png',
+                                    dialogHeight: 230,
+                                  ),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.25.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             WGambarTitle(
                               text:

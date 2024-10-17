@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -46,9 +47,21 @@ class StrukturAsamAminoPage extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.1.png',
-                              width: 140,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) {
+                                    return WDialogImage(
+                                        imageUrl:
+                                            'assets/images/gambar2.1.png');
+                                  },
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.1.png',
+                                width: 140,
+                              ),
                             ),
                             WGambarTitle(
                                 text: 'Gambar 2.1. Struktur Asam Amino')
@@ -60,9 +73,20 @@ class StrukturAsamAminoPage extends StatelessWidget {
                         flex: 2,
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.2.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                    imageUrl: 'assets/images/gambar2.2.png',
+                                    dialogHeight: 180,
+                                  ),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.2.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             WGambarTitle(
                                 text:
@@ -121,9 +145,18 @@ class StrukturAsamAminoPage extends StatelessWidget {
                         flex: 2,
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.3.png',
-                              width: 200,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar2.3.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.3.png',
+                                width: 200,
+                              ),
                             ),
                             WGambarTitle(
                               text: 'Gambar 2.3. Pembentukan Ikatan Peptida',
@@ -168,9 +201,20 @@ class StrukturAsamAminoPage extends StatelessWidget {
                   Center(
                     child: Column(
                       children: [
-                        CImagetAsset(
-                          imageName: 'assets/images/gambar2.4.png',
-                          width: MediaQuery.of(context).size.width / 1.5,
+                        GestureDetector(
+                          onDoubleTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (_) => WDialogImage(
+                                imageUrl: 'assets/images/gambar2.4.png',
+                                dialogHeight: 200,
+                              ),
+                            );
+                          },
+                          child: CImagetAsset(
+                            imageName: 'assets/images/gambar2.4.png',
+                            width: MediaQuery.of(context).size.width / 1.5,
+                          ),
                         ),
                         WGambarTitle(
                           text:

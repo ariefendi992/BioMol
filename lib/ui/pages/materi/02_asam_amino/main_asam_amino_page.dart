@@ -80,7 +80,7 @@ class _MainAsamAminoPageState extends State<MainAsamAminoPage> {
       ),
       body: PageView(
         controller: pageController,
-        physics: const NeverScrollableScrollPhysics(),
+        // physics: const NeverScrollableScrollPhysics(),
         children: [
           StrukturAsamAminoPage(),
           KlasifikasiAsamAminoPage(),

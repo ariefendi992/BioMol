@@ -32,7 +32,7 @@ class LatihanAsamAminoPage extends StatelessWidget {
                 ),
               ),
               child: Container(
-                width: 130,
+                width: 160,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

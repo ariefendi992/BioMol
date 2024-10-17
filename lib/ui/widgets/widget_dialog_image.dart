@@ -17,7 +17,7 @@ class WDialogImage extends StatelessWidget {
       shape: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
       child: dialogHeight == 0.0
           ? Container(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 6),
               width: double.infinity,
               child: GestureDetector(
                 onTap: () {
@@ -37,7 +37,7 @@ class WDialogImage extends StatelessWidget {
               ),
             )
           : Container(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 6),
               width: double.infinity,
               height: dialogHeight,
               child: GestureDetector(

@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -52,9 +53,19 @@ class FungsiProteinPage extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.17.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                    imageUrl: 'assets/images/gambar2.17.png',
+                                  ),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.17.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             Center(
                               child: WGambarTitle(
@@ -141,9 +152,18 @@ class FungsiProteinPage extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.19.png',
-                              width: 100,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar2.19.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.19.png',
+                                width: 100,
+                              ),
                             )
                           ],
                         ),

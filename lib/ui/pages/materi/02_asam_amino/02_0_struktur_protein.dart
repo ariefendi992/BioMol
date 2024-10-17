@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -56,9 +57,18 @@ class StrukturProteinPage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.12.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar2.12.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.12.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             Center(
                               child: WGambarTitle(
@@ -126,9 +136,18 @@ class StrukturProteinPage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.13.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar2.13.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.13.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             Center(
                               child: WGambarTitle(
@@ -154,9 +173,18 @@ class StrukturProteinPage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar2.14.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar2.14.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar2.14.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             Center(
                               child: WGambarTitle(
@@ -188,11 +216,22 @@ class StrukturProteinPage extends StatelessWidget {
                                 Flexible(
                                   child: Column(
                                     children: [
-                                      CImagetAsset(
-                                        imageName:
-                                            'assets/images/gambar2.15.png',
-                                        width:
-                                            MediaQuery.of(context).size.width,
+                                      GestureDetector(
+                                        onDoubleTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (_) => WDialogImage(
+                                              imageUrl:
+                                                  'assets/images/gambar2.15.png',
+                                            ),
+                                          );
+                                        },
+                                        child: CImagetAsset(
+                                          imageName:
+                                              'assets/images/gambar2.15.png',
+                                          width:
+                                              MediaQuery.of(context).size.width,
+                                        ),
                                       ),
                                       Center(
                                         child: WGambarTitle(
@@ -208,11 +247,21 @@ class StrukturProteinPage extends StatelessWidget {
                                 Flexible(
                                   child: Column(
                                     children: [
-                                      CImagetAsset(
-                                        imageName:
-                                            'assets/images/gambar2.16.png',
-                                        width:
-                                            MediaQuery.of(context).size.width,
+                                      GestureDetector(
+                                        onDoubleTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (_) => WDialogImage(
+                                                imageUrl:
+                                                    'assets/images/gambar2.16.png'),
+                                          );
+                                        },
+                                        child: CImagetAsset(
+                                          imageName:
+                                              'assets/images/gambar2.16.png',
+                                          width:
+                                              MediaQuery.of(context).size.width,
+                                        ),
                                       ),
                                       Center(
                                         child: WGambarTitle(
