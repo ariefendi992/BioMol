@@ -31,6 +31,12 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
   String dragTarget4 = '';
   String dragTarget5 = '';
 
+  int scoreNo1 = 0;
+  int scoreNo2 = 0;
+  int scoreNo3 = 0;
+  int scoreNo4 = 0;
+  int scoreNo5 = 0;
+
   int score = 0;
 
   clearTarget() {
@@ -39,6 +45,11 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
     dragTarget3 = '';
     dragTarget4 = '';
     dragTarget5 = '';
+    scoreNo1 = 0;
+    scoreNo2 = 0;
+    scoreNo3 = 0;
+    scoreNo4 = 0;
+    scoreNo5 = 0;
   }
 
   @override
@@ -468,15 +479,15 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                                       title: Text(
                                         'Nama Anda!',
                                         style: blackTextStyle.copyWith(
-                                            // fontFamily: caveatBrush,
-                                            ),
+                                          fontFamily: caveatBrush,
+                                        ),
                                       ),
                                       content: TextField(
                                         controller: playerNameController,
                                         decoration: InputDecoration(
                                           hintText: 'Input nama anda!',
                                           hintStyle: TextStyle(
-                                            fontFamily: 'Roboto',
+                                            fontFamily: caveatBrush,
                                           ),
                                         ),
                                       ),
