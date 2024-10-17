@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_judul_gambar.dart';
@@ -30,8 +31,17 @@ class AsamLemakPage extends StatelessWidget {
                       margin: const EdgeInsets.only(bottom: 4),
                     ),
                   ),
-                  Image.asset(
-                    'assets/images/tabel4.1.png',
+                  GestureDetector(
+                    onDoubleTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (_) => WDialogImage(
+                            imageUrl: 'assets/images/tabel4.1.png'),
+                      );
+                    },
+                    child: Image.asset(
+                      'assets/images/tabel4.1.png',
+                    ),
                   ),
                   const SizedBox(height: 16),
                   WTitleSubtitle(
@@ -54,7 +64,17 @@ class AsamLemakPage extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            Image.asset('assets/images/gambar4.4.png'),
+                            GestureDetector(
+                                onDoubleTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (_) => WDialogImage(
+                                        imageUrl:
+                                            'assets/images/gambar4.4.png'),
+                                  );
+                                },
+                                child:
+                                    Image.asset('assets/images/gambar4.4.png')),
                             WGambarTitle(
                               text:
                                   'Gambar 4.4. Struktur Asam Lemak  Tak Jenuh',
@@ -71,7 +91,16 @@ class AsamLemakPage extends StatelessWidget {
                       margin: const EdgeInsets.only(top: 12, bottom: 4),
                     ),
                   ),
-                  Image.asset('assets/images/tabel4.2.png')
+                  GestureDetector(
+                    onDoubleTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (_) => WDialogImage(
+                            imageUrl: 'assets/images/tabel4.2.png'),
+                      );
+                    },
+                    child: Image.asset('assets/images/tabel4.2.png'),
+                  )
                 ],
               ),
             ),

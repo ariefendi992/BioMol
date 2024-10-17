@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_judul_gambar.dart';
@@ -79,7 +80,15 @@ class FosfolipidPage extends StatelessWidget {
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/gambar4.10.png'),
+                        GestureDetector(
+                            onDoubleTap: () {
+                              showDialog(
+                                context: context,
+                                builder: (_) => WDialogImage(
+                                    imageUrl: 'assets/images/gambar4.10.png'),
+                              );
+                            },
+                            child: Image.asset('assets/images/gambar4.10.png')),
                         WGambarTitle(
                           text: 'Gambar 4.10. Struktur umum Gliserofosfolipid',
                           margin: const EdgeInsets.only(top: 2),
@@ -128,8 +137,17 @@ class FosfolipidPage extends StatelessWidget {
                   Center(
                     child: Column(
                       children: [
-                        Image.asset(
-                          'assets/images/gambar4.11.png',
+                        GestureDetector(
+                          onDoubleTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (_) => WDialogImage(
+                                  imageUrl: 'assets/images/gambar4.11.png'),
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/images/gambar4.11.png',
+                          ),
                         ),
                         WGambarTitle(
                           text: 'Gambar 4.11. Struktur umum Spingolipid',

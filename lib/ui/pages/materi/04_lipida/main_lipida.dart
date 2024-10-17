@@ -81,7 +81,7 @@ class _MainLipidaPageState extends State<MainLipidaPage> {
       ),
       body: PageView(
         controller: pageController,
-        physics: const NeverScrollableScrollPhysics(),
+        // physics: const NeverScrollableScrollPhysics(),
         children: [
           PengertianLipida0(),
           AsamLemakPage(),

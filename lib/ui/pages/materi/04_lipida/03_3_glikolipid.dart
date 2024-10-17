@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_judul_gambar.dart';
@@ -128,7 +129,16 @@ class GlikolipidPage extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: Image.asset('assets/images/gambar4.13.png'),
+                          child: GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar4.13.png'),
+                                );
+                              },
+                              child:
+                                  Image.asset('assets/images/gambar4.13.png')),
                         ),
                         WGambarTitle(
                           text:

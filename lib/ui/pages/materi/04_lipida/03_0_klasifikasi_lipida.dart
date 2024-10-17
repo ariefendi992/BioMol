@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_judul_gambar.dart';
@@ -57,7 +58,17 @@ class KlasifikasiLipidaPage extends StatelessWidget {
                   Center(
                       child: Column(
                     children: [
-                      Image.asset('assets/images/gambar4.6.png'),
+                      GestureDetector(
+                          onDoubleTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (_) => WDialogImage(
+                                imageUrl: 'assets/images/gambar4.6.png',
+                                dialogHeight: 250,
+                              ),
+                            );
+                          },
+                          child: Image.asset('assets/images/gambar4.6.png')),
                       WGambarTitle(
                         text: 'Gambar 4.6. Klasifikasi Lipid',
                         margin: const EdgeInsets.only(top: 4),

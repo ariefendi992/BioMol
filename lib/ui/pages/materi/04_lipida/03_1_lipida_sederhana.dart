@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_judul_gambar.dart';
@@ -75,7 +76,17 @@ class LipidaSederhanaPage extends StatelessWidget {
                         child: Column(
                           children: [
                             const SizedBox(height: 6),
-                            Image.asset('assets/images/gambar4.7.png'),
+                            GestureDetector(
+                                onDoubleTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (_) => WDialogImage(
+                                        imageUrl:
+                                            'assets/images/gambar4.7.png'),
+                                  );
+                                },
+                                child:
+                                    Image.asset('assets/images/gambar4.7.png')),
                             WGambarTitle(
                               text:
                                   'Gambar 4.7 Reaksi Pembentukan Trigliserida',
@@ -164,7 +175,17 @@ class LipidaSederhanaPage extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            Image.asset('assets/images/gambar4.8.png'),
+                            GestureDetector(
+                                onDoubleTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (_) => WDialogImage(
+                                        imageUrl:
+                                            'assets/images/gambar4.8.png'),
+                                  );
+                                },
+                                child:
+                                    Image.asset('assets/images/gambar4.8.png')),
                             WGambarTitle(
                               text: 'Gambar 4.8 Struktur Setil palmitat. '
                                   'Setil palmitat salah satu contoh senyawa '

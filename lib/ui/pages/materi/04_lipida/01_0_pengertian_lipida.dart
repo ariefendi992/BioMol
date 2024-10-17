@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_judul_gambar.dart';
@@ -141,7 +142,16 @@ class PengertianLipida0 extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            Image.asset('assets/images/gambar4.2.png'),
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar4.2.png'),
+                                );
+                              },
+                              child: Image.asset('assets/images/gambar4.2.png'),
+                            ),
                             WGambarTitle(
                               text:
                                   'Gambar 4.2. Contoh Asam Lemak. (a) Asam stearat; (b) Asam Oleat; (c) Asam Linolenat',
@@ -194,7 +204,16 @@ class PengertianLipida0 extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            Image.asset('assets/images/gambar4.3.png'),
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar4.3.png'),
+                                );
+                              },
+                              child: Image.asset('assets/images/gambar4.3.png'),
+                            ),
                             WGambarTitle(
                               text: 'Gambar 4.3. Struktur Asam Lemak Jenuh',
                               margin: const EdgeInsets.only(top: 4),
