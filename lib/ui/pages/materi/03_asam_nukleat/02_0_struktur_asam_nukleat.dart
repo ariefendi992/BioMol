@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -61,9 +62,18 @@ class StrukturAsamNukleat0 extends StatelessWidget {
                         flex: 2,
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar3.5.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar3.5.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar3.5.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             WGambarTitle(
                               text: 'Gambar 3.5. Struktur Gula Pentosa',
@@ -175,9 +185,18 @@ class StrukturAsamNukleat0 extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar3.7.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar3.7.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar3.7.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             WGambarTitle(
                               text:

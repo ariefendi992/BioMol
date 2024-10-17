@@ -32,7 +32,7 @@ class GoGamesAsamNukleat extends StatelessWidget {
                     ),
                   ),
                   child: Container(
-                    width: 130,
+                    width: 150,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

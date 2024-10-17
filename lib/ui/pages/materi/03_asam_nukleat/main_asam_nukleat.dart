@@ -77,7 +77,7 @@ class _MainAsamNukleatPageState extends State<MainAsamNukleatPage> {
       ),
       body: PageView(
         controller: pageController,
-        physics: const NeverScrollableScrollPhysics(),
+        // physics: const NeverScrollableScrollPhysics(),
         children: [
           FungsiAsamNukleat0(),
           StrukturAsamNukleat0(),

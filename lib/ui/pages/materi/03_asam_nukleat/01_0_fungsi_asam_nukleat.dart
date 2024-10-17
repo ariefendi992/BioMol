@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
@@ -79,9 +80,18 @@ class FungsiAsamNukleat0 extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar3.1.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar3.1.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar3.1.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             WGambarTitle(
                               text: 'Gambar 3.1. Struktur Nukleotida',
@@ -94,9 +104,18 @@ class FungsiAsamNukleat0 extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            CImagetAsset(
-                              imageName: 'assets/images/gambar3.2.png',
-                              width: MediaQuery.of(context).size.width,
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar3.2.png'),
+                                );
+                              },
+                              child: CImagetAsset(
+                                imageName: 'assets/images/gambar3.2.png',
+                                width: MediaQuery.of(context).size.width,
+                              ),
                             ),
                             WGambarTitle(
                               text: 'Gambar 3.2. Struktur Nukleosida',
@@ -159,9 +178,18 @@ class FungsiAsamNukleat0 extends StatelessWidget {
                   Center(
                     child: Column(
                       children: [
-                        CImagetAsset(
-                          imageName: 'assets/images/gambar3.4.png',
-                          width: MediaQuery.of(context).size.width / 1.4,
+                        GestureDetector(
+                          onDoubleTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (_) => WDialogImage(
+                                  imageUrl: 'assets/images/gambar3.4.png'),
+                            );
+                          },
+                          child: CImagetAsset(
+                            imageName: 'assets/images/gambar3.4.png',
+                            width: MediaQuery.of(context).size.width / 1.4,
+                          ),
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 32),

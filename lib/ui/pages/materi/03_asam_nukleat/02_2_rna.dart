@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_dialog_image.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_judul_gambar.dart';
@@ -87,8 +88,17 @@ class RNAPage extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            Image.asset(
-                              'assets/images/gambar3.11.png',
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar3.11.png'),
+                                );
+                              },
+                              child: Image.asset(
+                                'assets/images/gambar3.11.png',
+                              ),
                             ),
                             WGambarTitle(
                               text: 'Gambar 3.11. Struktur Double Heliks DNA',
@@ -101,8 +111,17 @@ class RNAPage extends StatelessWidget {
                       Flexible(
                         child: Column(
                           children: [
-                            Image.asset(
-                              'assets/images/gambar3.12.png',
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar3.12.png'),
+                                );
+                              },
+                              child: Image.asset(
+                                'assets/images/gambar3.12.png',
+                              ),
                             ),
                             WGambarTitle(
                               text: 'Gambar 3.12. Struktur Rantai Tunggal RNA',
@@ -194,7 +213,17 @@ class RNAPage extends StatelessWidget {
                         child: Column(
                           children: [
                             const SizedBox(height: 8),
-                            Image.asset('assets/images/gambar3.13.png'),
+                            GestureDetector(
+                              onDoubleTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (_) => WDialogImage(
+                                      imageUrl: 'assets/images/gambar3.13.png'),
+                                );
+                              },
+                              child:
+                                  Image.asset('assets/images/gambar3.13.png'),
+                            ),
                             WGambarTitle(
                               text: 'Gambar 3.13. Struktur t-RNA',
                               margin: const EdgeInsets.only(top: 4),
