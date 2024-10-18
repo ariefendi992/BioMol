@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/widgets/widget_button_next_back.dart';
 import 'package:bio_mol/ui/widgets/widget_daftar_materi.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
 import 'package:bio_mol/ui/widgets/widget_nomor_halaman.dart';
@@ -126,6 +125,14 @@ class DaftarMateriPage extends StatelessWidget {
                     child: Column(
                       children: [
                         WidgetDaftarMateri(
+                          title: 'Pendahuluan',
+                          nomorHalaman: '3',
+                          onTap: () {
+                            Navigator.pushNamed(context, '/pendahuluan');
+                          },
+                        ),
+                        WidgetDaftarMateri(
+                          margin: EdgeInsets.only(top: 12),
                           title: 'A. Karbohidrat',
                           nomorHalaman: '4',
                           onTap: () {
@@ -184,11 +191,11 @@ class DaftarMateriPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  WButtonNextOrBack(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/pendahuluan');
-                    },
-                  )
+                  // WButtonNextOrBack(
+                  //   onPressed: () {
+                  //     Navigator.pushNamed(context, '/pendahuluan');
+                  //   },
+                  // )
                 ],
               ),
             ),

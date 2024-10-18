@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/pages/materi/02_asam_amino/main_asam_amino_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bio_mol/cubit/jawaban_cubit.dart';
@@ -79,7 +80,13 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
         if (result) {
           return;
         }
-        Navigator.pushReplacementNamed(context, '/asamNukleat');
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(
+                builder: (_) => MainAsamAminoPage(
+                      initialPage: 7,
+                    )),
+            (_) => false);
       }),
       child: Scaffold(
         backgroundColor: kBgPrimaryColor,
@@ -138,7 +145,9 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                               ),
                               Container(
                                 height: 344,
-                                width: double.infinity,
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 8),
+                                width: MediaQuery.of(context).size.width,
                                 decoration: BoxDecoration(
                                   // color: kRedColor1,
                                   image: DecorationImage(
@@ -188,11 +197,6 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                                                     .read<ScoreCubit>()
                                                     .incrementeScore();
                                               }
-                                              // else {
-                                              //   context
-                                              //       .read<ScoreCubit>()
-                                              //       .decrementScore();
-                                              // }
 
                                               context
                                                   .read<JawabanCubit>()

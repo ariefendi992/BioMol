@@ -37,7 +37,7 @@ class LatihanAsamAminoPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Mulai Game',
+                      'Start Game',
                       style: blackTextStyle.copyWith(
                         fontSize: 20,
                       ),

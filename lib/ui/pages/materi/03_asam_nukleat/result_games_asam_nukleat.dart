@@ -1,10 +1,10 @@
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/games_asam_nukleat1.dart';
+import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/main_asam_nukleat.dart';
 import 'package:flutter/material.dart';
 
 class ResultGamesAsamNukleatPage extends StatelessWidget {
   final int skor1;
-  final int skor2;
+  final double skor2;
   final String playerName;
   const ResultGamesAsamNukleatPage({
     super.key,
@@ -15,6 +15,7 @@ class ResultGamesAsamNukleatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String totalSkor = '${skor1 + skor2}'.toString().split('.')[0];
     return Scaffold(
       backgroundColor: kBgPrimaryColor,
       appBar: PreferredSize(
@@ -148,7 +149,7 @@ class ResultGamesAsamNukleatPage extends StatelessWidget {
                     // ),
                     Center(
                       child: Text(
-                        'Total Skor : ${skor1 + skor2}',
+                        'Total Skor : ${totalSkor}',
                         style: blackTextStyle.copyWith(
                           fontFamily: caveatBrush,
                           color: kWhiteColor,
@@ -200,7 +201,7 @@ class ResultGamesAsamNukleatPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return GamesAsamNukleat1Page();
+                        return MainAsamNukleatPage(initialPage: 4);
                       }));
                       // Navigator.pushNamedAndRemoveUntil(context,
                       //     '/gameAsamAminoIdentifikasi', (route) => false);

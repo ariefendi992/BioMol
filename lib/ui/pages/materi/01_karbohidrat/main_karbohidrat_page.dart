@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bio_mol/cubit/boolean_cubit.dart';
@@ -39,6 +40,7 @@ class _MainKarbohidratPageState extends State<MainKarbohidratPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: WDrawer(),
       backgroundColor: kBgPrimaryColor,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(55),
@@ -52,7 +54,7 @@ class _MainKarbohidratPageState extends State<MainKarbohidratPage> {
               letterSpacing: 1.2,
             ),
           ),
-          automaticallyImplyLeading: false,
+          // automaticallyImplyLeading: false,
           actions: [
             IconButton(
               onPressed: () {

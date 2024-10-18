@@ -29,11 +29,21 @@ class _GamesAsamNukleat2PageState extends State<GamesAsamNukleat2Page> {
   String dragTarget3 = '';
   String dragTarget4 = '';
 
+  double scorejawabanNo1 = 0;
+  double scorejawabanNo2 = 0;
+  double scorejawabanNo3 = 0;
+  double scorejawabanNo4 = 0;
+
   clearTarget() {
     dragTarget1 = '';
     dragTarget2 = '';
     dragTarget3 = '';
     dragTarget4 = '';
+
+    scorejawabanNo1 = 0;
+    scorejawabanNo2 = 0;
+    scorejawabanNo3 = 0;
+    scorejawabanNo4 = 0;
   }
 
   @override
@@ -78,7 +88,7 @@ class _GamesAsamNukleat2PageState extends State<GamesAsamNukleat2Page> {
               onPressed: () {
                 setState(() {
                   clearTarget();
-                  context.read<JawabanCubit>().recallDataAsamNukleat();
+                  // context.read<JawabanCubit>().recallDataAsamNukleat();
                 });
               },
               icon: Icon(Icons.refresh),
@@ -141,9 +151,12 @@ class _GamesAsamNukleat2PageState extends State<GamesAsamNukleat2Page> {
                                 },
                                 onAcceptWithDetails: (details) {
                                   if (jawabanNo1 == details.data.name) {
-                                    context
-                                        .read<ScoreCubit>()
-                                        .incrementeScore();
+                                    // context
+                                    //     .read<ScoreCubit>()
+                                    //     .incrementeScore();
+                                    setState(() {
+                                      scorejawabanNo1 = 12.5;
+                                    });
                                   }
                                   context
                                       .read<JawabanCubit>()
@@ -194,9 +207,9 @@ class _GamesAsamNukleat2PageState extends State<GamesAsamNukleat2Page> {
                                 },
                                 onAcceptWithDetails: (details) {
                                   if (jawabanNo2 == details.data.name) {
-                                    context
-                                        .read<ScoreCubit>()
-                                        .incrementeScore();
+                                    setState(() {
+                                      scorejawabanNo2 = 12.5;
+                                    });
                                   }
                                   context
                                       .read<JawabanCubit>()
@@ -237,9 +250,9 @@ class _GamesAsamNukleat2PageState extends State<GamesAsamNukleat2Page> {
                                 },
                                 onAcceptWithDetails: (details) {
                                   if (jawabanNo3 == details.data.name) {
-                                    context
-                                        .read<ScoreCubit>()
-                                        .incrementeScore();
+                                    setState(() {
+                                      scorejawabanNo3 = 12.5;
+                                    });
                                   }
                                   context
                                       .read<JawabanCubit>()
@@ -280,9 +293,9 @@ class _GamesAsamNukleat2PageState extends State<GamesAsamNukleat2Page> {
                                 },
                                 onAcceptWithDetails: (details) {
                                   if (jawabanNo4 == details.data.name) {
-                                    context
-                                        .read<ScoreCubit>()
-                                        .incrementeScore();
+                                    setState(() {
+                                      scorejawabanNo4 = 12.5;
+                                    });
                                   }
                                   context
                                       .read<JawabanCubit>()
@@ -352,19 +365,6 @@ class _GamesAsamNukleat2PageState extends State<GamesAsamNukleat2Page> {
                               actions: [
                                 TextButton(
                                   onPressed: () {
-                                    // Navigator.pushAndRemoveUntil(context,
-                                    //     MaterialPageRoute(
-                                    //   builder: (context) {
-                                    //     // return ResultGameAsamAminoPage(
-                                    //     //   playerName: playerNameController.text,
-                                    //     //   skor1: 80,
-                                    //     //   skor2: context
-                                    //     //       .read<ScoreCubit>()
-                                    //     //       .totalScore(),
-                                    //     // );
-                                    //     return ResultGamesAsamNukleatPage();
-                                    // },
-                                    // ), (route) => false);
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -372,9 +372,10 @@ class _GamesAsamNukleat2PageState extends State<GamesAsamNukleat2Page> {
                                             ResultGamesAsamNukleatPage(
                                           playerName: playerNameController.text,
                                           skor1: widget.skorSebelum,
-                                          skor2: context
-                                              .read<ScoreCubit>()
-                                              .totalScore(),
+                                          skor2: scorejawabanNo1 +
+                                              scorejawabanNo2 +
+                                              scorejawabanNo3 +
+                                              scorejawabanNo4,
                                         ),
                                       ),
                                     );

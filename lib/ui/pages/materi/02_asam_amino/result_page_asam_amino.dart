@@ -34,7 +34,7 @@ class _ResultGameAsamAminoPageState extends State<ResultGameAsamAminoPage> {
         if (didpop) {
           return;
         }
-        Navigator.pushReplacementNamed(context, '/daftarMateri');
+        Navigator.pushNamedAndRemoveUntil(context, '/asamAmino', (_) => false);
       }),
       child: Scaffold(
         backgroundColor: kBgPrimaryColor,
@@ -124,50 +124,6 @@ class _ResultGameAsamAminoPageState extends State<ResultGameAsamAminoPage> {
                   ),
                   child: Column(
                     children: [
-                      // Row(
-                      //   children: [
-                      //     Text(
-                      //       '1. Klasifikasi',
-                      //       style: blackTextStyle.copyWith(
-                      //         fontFamily: caveatBrush,
-                      //         color: kWhiteColor,
-                      //         fontSize: 22,
-                      //       ),
-                      //     ),
-                      //     Spacer(),
-                      //     Text(
-                      //       '${widget.skor1}',
-                      //       style: blackTextStyle.copyWith(
-                      //         fontFamily: caveatBrush,
-                      //         color: kWhiteColor,
-                      //         fontSize: 22,
-                      //       ),
-                      //     ),
-                      //   ],
-                      // ),
-                      // const SizedBox(height: 16),
-                      // Row(
-                      //   children: [
-                      //     Text(
-                      //       '2. Identifikasi',
-                      //       style: blackTextStyle.copyWith(
-                      //         fontFamily: caveatBrush,
-                      //         color: kWhiteColor,
-                      //         fontSize: 22,
-                      //       ),
-                      //     ),
-                      //     Spacer(),
-                      //     Text(
-                      //       '${widget.skor2}',
-                      //       style: blackTextStyle.copyWith(
-                      //         fontFamily: caveatBrush,
-                      //         color: kWhiteColor,
-                      //         fontSize: 22,
-                      //       ),
-                      //     ),
-                      //   ],
-                      // ),
-                      // const SizedBox(height: 16),
                       Center(
                         child: Text(
                           'Total Skor : ${widget.skor2}',

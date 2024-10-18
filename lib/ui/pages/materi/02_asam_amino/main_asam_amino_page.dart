@@ -1,3 +1,4 @@
+import 'package:bio_mol/ui/widgets/widget_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/pages/materi/02_asam_amino/01_0_struktur_asam_amino.dart';
@@ -42,9 +43,10 @@ class _MainAsamAminoPageState extends State<MainAsamAminoPage> {
         if (result) {
           return;
         }
-        Navigator.pushReplacementNamed(context, '/daftarMateri');
+        Navigator.pushNamedAndRemoveUntil(context, '/asamAmino', (_) => false);
       }),
       child: Scaffold(
+        drawer: WDrawer(),
         backgroundColor: kBgPrimaryColor,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(40),
@@ -57,7 +59,7 @@ class _MainAsamAminoPageState extends State<MainAsamAminoPage> {
                 letterSpacing: 1.2,
               ),
             ),
-            automaticallyImplyLeading: false,
+            // automaticallyImplyLeading: false,
             actions: [
               IconButton(
                 onPressed: () {
