@@ -79,7 +79,7 @@ class WDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.my_library_books),
             title: Text(
-              'Asam Nukleat',
+              'Materi Asam Nukleat',
               style: blackTextStyle.copyWith(
                 fontFamily: caveatBrush,
                 fontSize: 18,
@@ -93,7 +93,7 @@ class WDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.my_library_books),
             title: Text(
-              'Lipida',
+              'Materi Lipida',
               style: blackTextStyle.copyWith(
                 fontFamily: caveatBrush,
                 fontSize: 18,
