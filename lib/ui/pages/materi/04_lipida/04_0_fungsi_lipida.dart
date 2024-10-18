@@ -119,7 +119,7 @@ class FungsiLipidaPage extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '38'),
+          WNomorHalaman(nomorHalaman: '35'),
         ],
       ),
     );

@@ -214,7 +214,7 @@ class LipidaPage extends StatelessWidget {
                 ),
               ),
             ),
-            WNomorHalaman(nomorHalaman: '31')
+            WNomorHalaman(nomorHalaman: '28')
           ],
         ),
       ),

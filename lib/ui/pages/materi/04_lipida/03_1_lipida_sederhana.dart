@@ -255,7 +255,7 @@ class LipidaSederhanaPage extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '35')
+          WNomorHalaman(nomorHalaman: '32')
         ],
       ),
     );

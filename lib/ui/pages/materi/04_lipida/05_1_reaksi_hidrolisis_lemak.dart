@@ -74,7 +74,7 @@ class ReaksiHidrolisisLemakPage extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '40'),
+          WNomorHalaman(nomorHalaman: '37'),
         ],
       ),
     );

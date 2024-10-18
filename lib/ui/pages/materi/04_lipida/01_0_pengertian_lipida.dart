@@ -227,7 +227,7 @@ class PengertianLipida0 extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '32')
+          WNomorHalaman(nomorHalaman: '29')
         ],
       ),
     );

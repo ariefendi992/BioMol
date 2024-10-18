@@ -136,7 +136,7 @@ class ReaksiPadaLipidaPage extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '39'),
+          WNomorHalaman(nomorHalaman: '36'),
         ],
       ),
     );

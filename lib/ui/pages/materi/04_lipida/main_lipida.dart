@@ -44,7 +44,7 @@ class _MainLipidaPageState extends State<MainLipidaPage> {
         if (result) {
           return;
         }
-        Navigator.pushNamedAndRemoveUntil(context, '/asamAmino', (_) => false);
+        Navigator.pushNamedAndRemoveUntil(context, '/lipida', (_) => false);
       }),
       child: Scaffold(
         drawer: WDrawer(),

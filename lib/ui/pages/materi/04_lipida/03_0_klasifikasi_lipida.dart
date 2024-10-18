@@ -79,7 +79,7 @@ class KlasifikasiLipidaPage extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '34'),
+          WNomorHalaman(nomorHalaman: '31'),
         ],
       ),
     );

@@ -195,7 +195,7 @@ class GlikolipidPage extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '37'),
+          WNomorHalaman(nomorHalaman: '34'),
         ],
       ),
     );

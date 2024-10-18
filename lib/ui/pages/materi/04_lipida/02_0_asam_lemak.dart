@@ -105,7 +105,7 @@ class AsamLemakPage extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '33'),
+          WNomorHalaman(nomorHalaman: '30'),
         ],
       ),
     );

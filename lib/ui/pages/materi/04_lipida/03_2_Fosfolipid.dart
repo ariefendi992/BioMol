@@ -160,7 +160,7 @@ class FosfolipidPage extends StatelessWidget {
               ),
             ),
           ),
-          WNomorHalaman(nomorHalaman: '36'),
+          WNomorHalaman(nomorHalaman: '33'),
         ],
       ),
     );
