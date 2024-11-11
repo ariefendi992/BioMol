@@ -126,6 +126,15 @@ class LipidaPage extends StatelessWidget {
                                   height: 1.25,
                                 ),
                               ),
+                              InkWell(
+                                onTap: () {
+                                  // Belum ada route
+                                },
+                                child: WTitleSubtitle(
+                                  title: '6. Uji Kompetensi',
+                                  height: 1.25,
+                                ),
+                              ),
                               Container(
                                 margin: EdgeInsets.only(top: 20),
                                 child: Column(
@@ -145,7 +154,7 @@ class LipidaPage extends StatelessWidget {
                                       margin:
                                           EdgeInsets.symmetric(horizontal: 24),
                                       padding: EdgeInsets.symmetric(
-                                        vertical: 20,
+                                        vertical: 12,
                                         horizontal: 12,
                                       ),
                                       decoration: BoxDecoration(
@@ -164,10 +173,10 @@ class LipidaPage extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           Text(
-                                            'Menjelaskan Struktur Lipid dan Membran  ',
+                                            'Mahasiswa mampu menjelaskan dan menganalisis struktur lipida dan membran sel.',
                                             style: blackTextStyle.copyWith(
-                                                fontFamily: 'Caveat Brush',
-                                                fontSize: 22,
+                                                fontFamily: luckyBones,
+                                                fontSize: 18,
                                                 height: 1.2),
                                             textAlign: TextAlign.center,
                                           ),
