@@ -223,7 +223,7 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                                         ),
                                         Positioned(
                                           // left: 150,
-                                          right: 20,
+                                          right: 10,
                                           top: 78,
                                           child: DragTarget<ItemModel>(
                                             builder: (context, acceptedItem,
@@ -277,7 +277,7 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                                           ),
                                         ),
                                         Positioned(
-                                          left: 10,
+                                          left: 0,
                                           // right: 28,
                                           top: 150,
                                           child: DragTarget<ItemModel>(
@@ -285,7 +285,7 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                                                 rejectedItem) {
                                               return Container(
                                                 height: 28,
-                                                width: 120,
+                                                width: 110,
                                                 alignment: Alignment.center,
                                                 decoration: BoxDecoration(
                                                   // color: kWhiteColor,
@@ -332,7 +332,7 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                                           ),
                                         ),
                                         Positioned(
-                                          left: 4,
+                                          left: 0,
                                           // right: 28,
                                           top: 230,
                                           child: DragTarget<ItemModel>(
@@ -340,7 +340,7 @@ class _GamesAsamAmino2State extends State<GamesAsamAmino2> {
                                                 rejectedItem) {
                                               return Container(
                                                 height: 28,
-                                                width: 115,
+                                                width: 105,
                                                 alignment: Alignment.center,
                                                 decoration: BoxDecoration(
                                                   // color: kWhiteColor,
