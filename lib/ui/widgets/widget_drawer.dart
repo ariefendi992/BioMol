@@ -116,7 +116,93 @@ class WDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              SystemNavigator.pop();
+              // SystemNavigator.pop();
+              showDialog(
+                  context: context,
+                  builder: (_) {
+                    return Dialog(
+                      shape: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      insetPadding: const EdgeInsets.symmetric(horizontal: 28),
+                      child: Container(
+                        // height: 100,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 20),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset(
+                                  'assets/images/logo_app.png',
+                                  height: 40,
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  'Konfirmasi Keluar...!!!',
+                                  style: blackTextStyle.copyWith(
+                                      fontFamily: caveatBrush, fontSize: 24),
+                                )
+                              ],
+                            ),
+                            const SizedBox(height: 16),
+                            Center(
+                              child: Text(
+                                'Apakah anda ingin keluar dari aplikasi?',
+                                style: blackTextStyle.copyWith(
+                                  fontFamily: caveatBrush,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(top: 16),
+                              width: double.infinity,
+                              alignment: Alignment.bottomRight,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    style: TextButton.styleFrom(
+                                        padding: EdgeInsets.all(0)),
+                                    child: Text(
+                                      'Tidak',
+                                      style: blackTextStyle.copyWith(
+                                        fontFamily: caveatBrush,
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      SystemNavigator.pop();
+                                    },
+                                    style: TextButton.styleFrom(
+                                        padding: EdgeInsets.all(0)),
+                                    child: Text(
+                                      'Ya',
+                                      style: blackTextStyle.copyWith(
+                                        fontFamily: caveatBrush,
+                                        fontSize: 22,
+                                        color: kRedColor1,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  });
             },
           ),
         ],
