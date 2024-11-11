@@ -94,6 +94,22 @@ class AsamNukleatPage extends StatelessWidget {
                                   height: 1.25,
                                 ),
                               ),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MainAsamNukleatPage(
+                                        initialPage: 1,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: WTitleSubtitle(
+                                  title: '4. Uji Kompetensi',
+                                  height: 1.25,
+                                ),
+                              ),
                               Container(
                                 margin: EdgeInsets.only(top: 20),
                                 child: Column(
@@ -132,12 +148,12 @@ class AsamNukleatPage extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           Text(
-                                            'Menjelaskan Struktur Asam Nukleat ',
+                                            'Mahasiswa mampu menjelaskan dan menganalisis struktur asmam nukleat',
                                             style: blackTextStyle.copyWith(
-                                                fontFamily: 'Caveat Brush',
-                                                fontSize: 22,
+                                                fontFamily: luckyBones,
+                                                fontSize: 18,
                                                 height: 1.2),
-                                            textAlign: TextAlign.justify,
+                                            textAlign: TextAlign.center,
                                           ),
                                         ],
                                       ),
