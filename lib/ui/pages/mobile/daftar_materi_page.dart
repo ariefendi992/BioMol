@@ -72,6 +72,14 @@ class DaftarMateriPage extends StatelessWidget {
                       Navigator.pushNamed(context, '/lipida');
                     },
                   ),
+                  WidgetDaftarMateri(
+                    margin: EdgeInsets.only(top: 12),
+                    title: 'E. Daftar Pustaka',
+                    nomorHalaman: '39',
+                    onTap: () {
+                      // Navigator.pushNamed(context, '/lipida');
+                    },
+                  ),
                 ],
               ),
             ),

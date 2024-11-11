@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/games_asam_nukleat1.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/03_asam_nukleat/games_asam_nukleat1.dart';
 
 class GoGamesAsamNukleat extends StatelessWidget {
   const GoGamesAsamNukleat({super.key});

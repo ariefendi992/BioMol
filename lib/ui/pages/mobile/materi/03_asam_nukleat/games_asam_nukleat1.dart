@@ -1,5 +1,5 @@
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/games_asam_nukleat2.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/main_asam_nukleat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/03_asam_nukleat/games_asam_nukleat2.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/03_asam_nukleat/main_asam_nukleat.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
 import 'package:bio_mol/ui/widgets/widget_input_jawaban.dart';

@@ -2,7 +2,7 @@ import 'package:bio_mol/cubit/jawaban_cubit.dart';
 import 'package:bio_mol/cubit/score_cubit.dart';
 import 'package:bio_mol/models/item_model.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/result_games_asam_nukleat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/03_asam_nukleat/result_games_asam_nukleat.dart';
 import 'package:bio_mol/ui/widgets/widget_drag_asam_amino2.dart';
 import 'package:bio_mol/ui/widgets/widget_title_subtitle.dart';
 import 'package:flutter/material.dart';

@@ -99,6 +99,10 @@ flutter:
     - family: Caveat Brush
       fonts:
         - asset: assets/fonts/CaveatBrush-Regular.ttf
+
+    - family: Luckybones
+      fonts:
+        - asset: assets/fonts/Luckybones-bold.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

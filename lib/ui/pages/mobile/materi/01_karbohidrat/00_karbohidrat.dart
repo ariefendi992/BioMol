@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/main_karbohidrat_page.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/main_karbohidrat_page.dart';
 import 'package:bio_mol/ui/widgets/widget_button_next_back.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
 import 'package:bio_mol/ui/widgets/widget_nomor_halaman.dart';
@@ -104,7 +104,7 @@ class KarbohidratPage extends StatelessWidget {
                                 },
                               ),
                               WSubMateri(
-                                title: '5. Identifikasi Karbohidrat',
+                                title: '5.Tugas Proyek',
                                 onTap: () {
                                   Navigator.push(
                                     context,
@@ -140,7 +140,7 @@ class KarbohidratPage extends StatelessWidget {
                                 margin: EdgeInsets.symmetric(horizontal: 24),
                                 padding: EdgeInsets.symmetric(
                                   vertical: 10,
-                                  horizontal: 20,
+                                  horizontal: 4,
                                 ),
                                 decoration: BoxDecoration(
                                     color: kBlueColor1,
@@ -157,11 +157,12 @@ class KarbohidratPage extends StatelessWidget {
                                 child: Column(
                                   children: [
                                     Text(
-                                      'Mampu menjelaskan struktur, golongan  dan fungsi karbohidrat',
+                                      'Mahasiswa mampu menjelaskan struktur, '
+                                      'golongan dan fungsi karbohidrat',
                                       textAlign: TextAlign.center,
                                       style: blackTextStyle.copyWith(
-                                        fontSize: 22,
-                                        fontFamily: caveatBrush,
+                                        fontSize: 18,
+                                        fontFamily: luckyBones,
                                       ),
                                     ),
                                   ],

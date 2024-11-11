@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/02_asam_amino/main_asam_amino_page.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/main_asam_amino_page.dart';
 import 'package:bio_mol/ui/widgets/widget_button_next_back.dart';
 import 'package:bio_mol/ui/widgets/widget_icon.dart';
 import 'package:bio_mol/ui/widgets/widget_nomor_halaman.dart';

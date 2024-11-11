@@ -1,5 +1,5 @@
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/main_asam_nukleat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/03_asam_nukleat/main_asam_nukleat.dart';
 import 'package:flutter/material.dart';
 
 class ResultGamesAsamNukleatPage extends StatelessWidget {

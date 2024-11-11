@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/02_asam_amino/games_asam_02.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/games_asam_02.dart';
 
 class LatihanAsamAminoPage extends StatelessWidget {
   const LatihanAsamAminoPage({super.key});

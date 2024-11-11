@@ -1,24 +1,27 @@
 import 'package:bio_mol/ui/widgets/widget_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/01_0_fungsi_asam_nukleat.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/02_0_struktur_asam_nukleat.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/02_1_dna.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/02_2_rna.dart';
-import 'package:bio_mol/ui/pages/materi/03_asam_nukleat/03_go_games.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/01_0_struktur_asam_amino.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/01_1_klasifikasi_asam_amino.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/01_2_klasifikasi_asam_amino.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/01_3_stereoisomer_asam_amino.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/02_0_struktur_protein.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/02_1_fungsi_protein.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/02_2_denaturasi_protein.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/02_3_latihan.dart';
 
-class MainAsamNukleatPage extends StatefulWidget {
+class MainAsamAminoPage extends StatefulWidget {
   final int? initialPage;
-  const MainAsamNukleatPage({
+  const MainAsamAminoPage({
     super.key,
     this.initialPage = 0,
   });
 
   @override
-  State<MainAsamNukleatPage> createState() => _MainAsamNukleatPageState();
+  State<MainAsamAminoPage> createState() => _MainAsamAminoPageState();
 }
 
-class _MainAsamNukleatPageState extends State<MainAsamNukleatPage> {
+class _MainAsamAminoPageState extends State<MainAsamAminoPage> {
   late PageController pageController = PageController();
 
   @override
@@ -40,8 +43,7 @@ class _MainAsamNukleatPageState extends State<MainAsamNukleatPage> {
         if (result) {
           return;
         }
-        Navigator.pushNamedAndRemoveUntil(
-            context, '/asamNukleat', (_) => false);
+        Navigator.pushNamedAndRemoveUntil(context, '/asamAmino', (_) => false);
       }),
       child: Scaffold(
         drawer: WDrawer(),
@@ -50,7 +52,7 @@ class _MainAsamNukleatPageState extends State<MainAsamNukleatPage> {
           preferredSize: Size.fromHeight(40),
           child: AppBar(
             title: Text(
-              'ASAM NUKLEAT',
+              'ASAM AMINO & PROTEIN',
               style: blackTextStyle.copyWith(
                 fontSize: 22,
                 fontFamily: caveatBrush,
@@ -90,11 +92,15 @@ class _MainAsamNukleatPageState extends State<MainAsamNukleatPage> {
           controller: pageController,
           // physics: const NeverScrollableScrollPhysics(),
           children: [
-            FungsiAsamNukleat0(),
-            StrukturAsamNukleat0(),
-            DnaPage(),
-            RNAPage(),
-            GoGamesAsamNukleat(),
+            StrukturAsamAminoPage(),
+            KlasifikasiAsamAminoPage(),
+            KlasifikasiAsamAminoPage2(),
+            StereoisomerAsamAminoPage(),
+            StrukturProteinPage(),
+            FungsiProteinPage(),
+            DenaturasiProteinPage(),
+            LatihanAsamAminoPage(),
+            // GamesAsamAmino2(),
           ],
         ),
       ),

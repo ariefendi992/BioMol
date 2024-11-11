@@ -1,15 +1,15 @@
 import 'package:bio_mol/ui/widgets/widget_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/01_0_pengertian_lipida.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/02_0_asam_lemak.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/03_0_klasifikasi_lipida.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/03_1_lipida_sederhana.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/03_2_Fosfolipid.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/03_3_glikolipid.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/04_0_fungsi_lipida.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/05_0_reaksi_pada_lipida.dart';
-import 'package:bio_mol/ui/pages/materi/04_lipida/05_1_reaksi_hidrolisis_lemak.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/01_0_pengertian_lipida.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/02_0_asam_lemak.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/03_0_klasifikasi_lipida.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/03_1_lipida_sederhana.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/03_2_Fosfolipid.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/03_3_glikolipid.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/04_0_fungsi_lipida.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/05_0_reaksi_pada_lipida.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/04_lipida/05_1_reaksi_hidrolisis_lemak.dart';
 
 class MainLipidaPage extends StatefulWidget {
   final int? initialPage;

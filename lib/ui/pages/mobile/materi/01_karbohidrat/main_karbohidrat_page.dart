@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bio_mol/cubit/boolean_cubit.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/01_pengertian_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/02_struktur_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/03_2_golongan_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/03_3_golongan_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/03_4_golongan_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/03_5_golongan_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/03_0_golongan_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/03_1_golongan_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/04_0_fungsi_karbohidrat.dart';
-import 'package:bio_mol/ui/pages/materi/01_karbohidrat/05_0_identifikasi_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/01_pengertian_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/02_struktur_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/03_2_golongan_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/03_3_golongan_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/03_4_golongan_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/03_5_golongan_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/03_0_golongan_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/03_1_golongan_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/04_0_fungsi_karbohidrat.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/01_karbohidrat/05_0_identifikasi_karbohidrat.dart';
 
 class MainKarbohidratPage extends StatefulWidget {
   final int? initialPage;

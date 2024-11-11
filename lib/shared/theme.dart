@@ -28,7 +28,9 @@ TextStyle blackTextStyle = TextStyle(color: kBlackColor2);
 double defaultPadding = 12;
 double defaultRadius = 18;
 
+String afacadFlux = 'Afacad Flux';
 String caveatBrush = 'Caveat Brush';
+String luckyBones = 'Luckybones';
 
 TextAlign justify = TextAlign.justify;
 TextAlign center = TextAlign.center;

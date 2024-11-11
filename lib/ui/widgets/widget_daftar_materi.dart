@@ -5,14 +5,17 @@ class WidgetDaftarMateri extends StatelessWidget {
   final EdgeInsets margin;
   final String title;
   final String nomorHalaman;
+  final double fontSizeTitle;
+  final double fontSizePage;
   final Function() onTap;
-  const WidgetDaftarMateri({
-    super.key,
-    required this.title,
-    required this.nomorHalaman,
-    required this.onTap,
-    this.margin = EdgeInsets.zero,
-  });
+  const WidgetDaftarMateri(
+      {super.key,
+      required this.title,
+      required this.nomorHalaman,
+      required this.onTap,
+      this.margin = EdgeInsets.zero,
+      this.fontSizeTitle = 26,
+      this.fontSizePage = 24});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,7 @@ class WidgetDaftarMateri extends StatelessWidget {
             Text(
               '${title}',
               style: blackTextStyle.copyWith(
-                fontSize: 26,
+                fontSize: fontSizeTitle,
                 // fontWeight: semiBold,
                 fontFamily: caveatBrush,
               ),
@@ -40,7 +43,7 @@ class WidgetDaftarMateri extends StatelessWidget {
               child: Text(
                 '${nomorHalaman}',
                 style: blackTextStyle.copyWith(
-                  fontSize: 24,
+                  fontSize: fontSizePage,
                   fontFamily: caveatBrush,
                   // fontWeight: medium,
                 ),

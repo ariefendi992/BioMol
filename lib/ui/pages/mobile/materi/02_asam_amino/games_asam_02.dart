@@ -1,11 +1,11 @@
-import 'package:bio_mol/ui/pages/materi/02_asam_amino/main_asam_amino_page.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/main_asam_amino_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bio_mol/cubit/jawaban_cubit.dart';
 import 'package:bio_mol/cubit/score_cubit.dart';
 import 'package:bio_mol/models/item_model.dart';
 import 'package:bio_mol/shared/theme.dart';
-import 'package:bio_mol/ui/pages/materi/02_asam_amino/result_page_asam_amino.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/02_asam_amino/result_page_asam_amino.dart';
 import 'package:bio_mol/ui/widgets/widget_drag_asam_amino2.dart';
 import 'package:bio_mol/ui/widgets/widget_nomor_halaman.dart';
 import 'package:bio_mol/ui/widgets/widget_title_subtitle.dart';
