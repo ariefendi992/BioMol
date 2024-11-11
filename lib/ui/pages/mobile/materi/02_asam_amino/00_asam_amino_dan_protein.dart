@@ -122,24 +122,6 @@ class AsamAminoPage extends StatelessWidget {
                                         isTitle: false,
                                       ),
                                     ),
-                                    InkWell(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                MainAsamAminoPage(
-                                              initialPage: 3,
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                      child: WTitleSubtitle(
-                                        title: 'd. Fungsi Asam Amino',
-                                        height: 1.25,
-                                        isTitle: false,
-                                      ),
-                                    ),
                                   ],
                                 ),
                               ),
@@ -221,6 +203,22 @@ class AsamAminoPage extends StatelessWidget {
                                   ],
                                 ),
                               ),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MainAsamAminoPage(
+                                        initialPage: 4,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: WTitleSubtitle(
+                                  title: '3. Uji Kompetensi',
+                                  height: 1.25,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -242,8 +240,8 @@ class AsamAminoPage extends StatelessWidget {
                                 width: double.infinity,
                                 margin: EdgeInsets.symmetric(horizontal: 24),
                                 padding: EdgeInsets.symmetric(
-                                  vertical: 8,
-                                  horizontal: 12,
+                                  vertical: 12,
+                                  horizontal: 16,
                                 ),
                                 decoration: BoxDecoration(
                                     color: kBlueColor1,
@@ -266,17 +264,18 @@ class AsamAminoPage extends StatelessWidget {
                                         Text(
                                           '1.',
                                           style: blackTextStyle.copyWith(
-                                              fontFamily: caveatBrush,
-                                              fontSize: 20,
+                                              fontFamily: luckyBones,
+                                              fontSize: 18,
                                               height: 1.2),
                                         ),
                                         const SizedBox(width: 6),
                                         Flexible(
                                           child: Text(
-                                            'Menjelaskan Struktur asam amino dan polipeptida',
+                                            'Mahasiswa mampu menjelaskan struktur'
+                                            'asam amino dan polipeptida.',
                                             style: blackTextStyle.copyWith(
-                                                fontFamily: caveatBrush,
-                                                fontSize: 20,
+                                                fontFamily: luckyBones,
+                                                fontSize: 18,
                                                 height: 1.2),
                                             textAlign: TextAlign.left,
                                           ),
@@ -290,17 +289,17 @@ class AsamAminoPage extends StatelessWidget {
                                         Text(
                                           '2.',
                                           style: blackTextStyle.copyWith(
-                                              fontFamily: caveatBrush,
-                                              fontSize: 20,
+                                              fontFamily: luckyBones,
+                                              fontSize: 18,
                                               height: 1.2),
                                         ),
                                         const SizedBox(width: 6),
                                         Flexible(
                                           child: Text(
-                                            'Menjelaskan Struktur Protein dan Fungsinya',
+                                            'Mahasiswa mampu menjelaskan struktur protein dan fungisnya.',
                                             style: blackTextStyle.copyWith(
-                                                fontFamily: caveatBrush,
-                                                fontSize: 20,
+                                                fontFamily: luckyBones,
+                                                fontSize: 18,
                                                 height: 1.2),
                                             textAlign: TextAlign.left,
                                           ),
