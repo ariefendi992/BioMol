@@ -78,6 +78,7 @@ class DaftarMateriPage extends StatelessWidget {
                     nomorHalaman: '39',
                     onTap: () {
                       // Navigator.pushNamed(context, '/lipida');
+                      Navigator.pushNamed(context, '/daftarPustaka');
                     },
                   ),
                 ],

@@ -1,4 +1,5 @@
 import 'package:bio_mol/ui/pages/desktop/spalsh_page_desktop.dart';
+import 'package:bio_mol/ui/pages/mobile/materi/daftar_pustaka_page.dart';
 import 'package:bio_mol/ui/pages/responsive_layout.dart';
 import 'package:bio_mol/ui/pages/tablet/daftar_materi_page_tablet.dart';
 import 'package:bio_mol/ui/pages/tablet/pendahuluan_page_tablet.dart';
@@ -70,6 +71,9 @@ class MyApp extends StatelessWidget {
           '/asamNukleat': (context) => AsamNukleatPage(),
           '/lipida': (context) => LipidaPage(),
           '/gameAsamAminoIdentifikasi': (context) => GamesAsamAmino2(),
+          '/daftarPustaka': (context) => ResponsiveLayout(
+                mobile: DaftarPustakaPageMobile(),
+              )
         },
       ),
     );
